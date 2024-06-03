@@ -7,12 +7,11 @@ def calhora(minutos):
     m = minutos%60
     return f"{h:02}{m:02}"
 
-lsNum = ["24","26","29","30"]
+lsNum = ["06","07","08","09","10","13","14","15","16","17","20","21","22","23","24","27","28","29"]
 i = 0
 proximo = input("Next?")
-while i < len(lsNum): #(proximo != "x"):
-    try:
-        
+while (proximo != "x"): #i < len(lsNum): #(proximo != "x"):
+    try:        
         entrada = random.randint(0,20)+(480-10)
         hm1 = calhora(entrada)
         saida = random.randint(0,20)+(720-10)
@@ -45,4 +44,4 @@ while i < len(lsNum): #(proximo != "x"):
         except:
             print("erros")
 
-    #proximo = input("Next?")
+    proximo = input("Next?")
