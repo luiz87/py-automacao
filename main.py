@@ -7,11 +7,15 @@ def calhora(minutos):
     m = minutos%60
     return f"{h:02}{m:02}"
 
-lsNum = ["06","07","08","09","10","13","14","15","16","17","20","21","22","23","24","27","28","29"]
+lsNum = ["23","24","25","26","27"]
 i = 0
 proximo = input("Next?")
-while (proximo != "x"): #i < len(lsNum): #(proximo != "x"):
+while (i < len(lsNum)): #i < len(lsNum): #(proximo != "x"):
+    print(i)
     try:        
+        img = pyautogui.locateCenterOnScreen("obs.png")
+        pyautogui.click(img.x, img.y)
+
         entrada = random.randint(0,20)+(480-10)
         hm1 = calhora(entrada)
         saida = random.randint(0,20)+(720-10)
@@ -44,4 +48,4 @@ while (proximo != "x"): #i < len(lsNum): #(proximo != "x"):
         except:
             print("erros")
 
-    proximo = input("Next?")
+#    proximo = input("Next?")
